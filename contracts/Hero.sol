@@ -9,18 +9,38 @@ contract Hero {
     }
     mapping(address => uint256[]) addressToHeroes;
 
-    function generateRandom() public view returns (uint) {
-    return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp)));
-}
-//here
+    function generateRandom() public view returns (uint256) {
+        return
+            uint256(
+                keccak256(abi.encodePacked(block.difficulty, block.timestamp))
+            );
+    }
+
+    //here
 
     function gerHeroes() public view returns (uint256[] memory) {
         return addressToHeroes[msg.sender];
     }
 
-    
     function createHero(Class class) public payable {
         require(msg.value >= 0.05 ether, "please send more money !");
+        uint256[] memory stats = new uint256[](5);
+        stats[0] = 2;
+        stats[1] = 7;
+        stats[2] = 12;
+        stats[3] = 17;
+        stats[4] = 22;
 
+        uint256 len = 5;
+        uint256 hero = uint256(class);
+        do {
+            uint256 pos = generateRandom() % len;
+            uint256 value = (generateRandom() % (13 + len)) + 1;
+            hero |= value << stats[pos];
+            len--;
+            stats[pos] = stats[len];
+        } while (len > 0);
+
+        addressToHeroes[msg.sender].push(hero);
     }
 }
