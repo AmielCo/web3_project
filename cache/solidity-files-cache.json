@@ -142,6 +142,41 @@
       "artifacts": [
         "TestGas"
       ]
+    },
+    "C:\\Users\\amiel\\web3_project\\contracts\\Hero.sol": {
+      "lastModificationDate": 1655816969515,
+      "contentHash": "07adf22178194bea6befe2e622519035",
+      "sourceName": "contracts/Hero.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Hero"
+      ]
     }
   }
 }
