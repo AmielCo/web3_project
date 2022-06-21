@@ -6,6 +6,7 @@ async function deploy() {
   const Counter = await ethers.getContractFactory("Counter");
   const counter = await Counter.deploy();
   await counter.deployed();
+  console.log(counter.address);
   return counter;
 }
 

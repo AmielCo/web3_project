@@ -107,6 +107,41 @@
       "artifacts": [
         "console"
       ]
+    },
+    "C:\\Users\\amiel\\web3_project\\contracts\\TestGas.sol": {
+      "lastModificationDate": 1655749178703,
+      "contentHash": "f1fdec3b38707bbaf1f8a24754eb84f5",
+      "sourceName": "contracts/TestGas.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TestGas"
+      ]
     }
   }
 }
