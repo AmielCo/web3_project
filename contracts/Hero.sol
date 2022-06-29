@@ -23,23 +23,23 @@ contract Hero {
     }
 
     function getStrenght(uint256 hero) public pure returns (uint256) {
-        return (hero >> 2) & 0x1F;
+        return uint32(hero>> 2) & 0x1F;
     }
 
     function getHealth(uint256 hero) public pure returns (uint256) {
-        return (hero >> 7) & 0x1F;
+        return uint32(hero>> 7) & 0x1F;
     }
 
     function getDex(uint256 hero) public pure returns (uint256) {
-        return (hero >> 12) & 0x1F;
+        return uint32(hero>> 12) & 0x1F;
     }
 
     function getIntellect(uint256 hero) public pure returns (uint256) {
-        return (hero >> 17) & 0x1F;
+        return uint32(hero>> 17) & 0x1F;
     }
 
     function getMagic(uint256 hero) public pure returns (uint256) {
-        return (hero >> 22) & 0x1F;
+        return uint32(hero>> 22) & 0x1F;
     }
 
     function createHero(Class class) public payable {
